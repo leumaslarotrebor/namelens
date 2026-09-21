@@ -141,7 +141,7 @@ Skip link, landmarks, focus moved to the main region on navigation, visible focu
 - Wikidata coverage of names is incomplete and most names have no pronunciation there.
 - Information from these sources is not authoritative and can be wrong.
 - Script detection is lightweight and does not identify languages.
-- Provider integration was tested against mocked responses; live behaviour was not verified in the development environment.
+- Provider integration is unit-tested against mocked responses; live behaviour was spot-checked by hand (a lookup of García on 21 Sep 2026 returned Wikidata and Wikipedia evidence) but has not been evaluated systematically.
 - No user study, interviews or retrieval evaluation have been carried out; nothing in this repository reports research results.
 - No claim of comprehensive linguistic or cultural coverage.
 - No authentication, rate limiting or retention policy; not suitable for public production use as-is.
