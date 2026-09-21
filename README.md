@@ -7,7 +7,7 @@ A research-oriented prototype that looks up public information about a personal 
 ## Live demo
 
 - **Web app:** https://leumaslarotrebor.github.io/namelens/
-- **API health:** set up per [docs/DEPLOY.md](docs/DEPLOY.md) (GitHub Pages frontend + Render API). The free API tier sleeps when idle, so the first lookup may take up to a minute.
+- **API health:** https://namelens-api.onrender.com/api/v1/health
 - **Suggested 60-second tour:** open the site → choose 山田 太郎 or محمد بن سلمان from the script table → read *Confidence and uncertainty* → expand *Show evidence* and *How this result was produced* → try a name with no entry (e.g. *Zzyzx*) to see the "insufficient information" state.
 
 ## Why NameLens?
