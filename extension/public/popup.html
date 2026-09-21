@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NameLens</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header><h1>Name<span>Lens</span></h1></header>
+  <main>
+    <form id="form" novalidate>
+      <label for="name">Name to look up</label>
+      <div class="row"><input id="name" type="text" dir="auto" autocomplete="off" spellcheck="false"><button type="submit">Look up</button></div>
+    </form>
+    <p id="sent-notice" class="muted" aria-live="polite"></p>
+    <div id="status" aria-live="polite"></div>
+    <div id="result"></div>
+    <details class="privacy">
+      <summary>What is sent and stored?</summary>
+      <ul>
+        <li>Only the text you selected or typed is sent, to <strong id="api-host"></strong>. The extension does not read the rest of the page, your history or your identity.</li>
+        <li>The extension only touches a page after you choose “Explore this name with NameLens”.</li>
+        <li>Lookup history stays on this device and is off unless you turn it on.</li>
+      </ul>
+      <label class="opt"><input id="history-toggle" type="checkbox"> Keep a local history of my lookups</label>
+      <ul id="history" class="history"></ul>
+      <button id="clear-history" type="button" hidden>Clear local history</button>
+    </details>
+  </main>
+  <footer class="muted">Independent portfolio project. Not affiliated with DCU or MyNameIS.</footer>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: namelens
+      POSTGRES_PASSWORD: namelens   # local development only
+      POSTGRES_DB: namelens
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U namelens"]
+      interval: 3s
+      retries: 20
+  app:
+    build: .
+    depends_on:
+      db: { condition: service_healthy }
+    environment:
+      DATABASE_URL: postgresql://namelens:namelens@db:5432/namelens
+    ports: ["8000:8000"]
+volumes:
+  pgdata:

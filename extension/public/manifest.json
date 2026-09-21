@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "NameLens",
+  "version": "0.1.0",
+  "description": "Look up a selected name with sources and evidence. Independent portfolio project, not affiliated with DCU or MyNameIS.",
+  "minimum_chrome_version": "120",
+  "permissions": ["contextMenus", "activeTab", "scripting", "storage"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "NameLens", "default_popup": "popup.html" },
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'self'" }
+}
